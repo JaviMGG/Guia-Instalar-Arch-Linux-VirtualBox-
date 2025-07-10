@@ -188,6 +188,7 @@ A continuacion, ejecutamos el siguiente comando para empezar a instalar:
  #### Al clicar en "Desktop" nos aparece las siguientes opciones de entorno gráfico: 
 
  <img src= "Imagenes/3- ArchInstall/Entorno Grafico/4- perfil4.png" width="800">
+ 
 - Awesome - https://awesomewm.org/
 - Bspwm - https://github.com/baskerville/bspwm
 - Budgie - https://blog.buddiesofbudgie.org/
