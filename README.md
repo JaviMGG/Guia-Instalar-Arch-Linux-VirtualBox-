@@ -171,15 +171,44 @@ A continuacion, ejecutamos el siguiente comando para empezar a instalar:
 
 ### Perfil
  <img src= "Imagenes/3- ArchInstall/Entorno Grafico/1- perfil1.png" width="800">
+
  #### Clicamos enter y nos aparece esto:
- <img src= "Imagenes/3- ArchInstall/Entorno Grafico/2- perfil2.png" width="800">
  - Tipo (escoger tipo de entorno grafico)
  - Regresar (volver atras)
+ <img src= "Imagenes/3- ArchInstall/Entorno Grafico/2- perfil2.png" width="800">
+ 
  Al escoger "Tipo" nos aparece la siguiente opcion:
+ 
  <img src= "Imagenes/3- ArchInstall/Entorno Grafico/3- perfil3.png" width="800">
+ 
  - Desktop: Entorno gráfico completo para uso general.
  - Minimal: Sistema básico sin extras, ideal para personalizar.
  - Server: Configuración para servidores sin gráficos.
  - Xorg: Servidor gráfico sin entorno de escritorio predefinido.
+ #### Al clicar en "Desktop" nos aparece las siguientes opciones de entorno gráfico: 
+
+ <img src= "Imagenes/3- ArchInstall/Entorno Grafico/4- perfil4.png" width="800">
+- Awesome - https://awesomewm.org/
+- Bspwm - https://github.com/baskerville/bspwm
+- Budgie - https://blog.buddiesofbudgie.org/
+- Cinnamon - https://projects.linuxmint.com/cinnamon/
+- Cutefish (descontinuado) - https://github.com/cutefishos
+- Deepin - https://www.deepin.org/en/dde/
+- Enlightenment - https://www.enlightenment.org/
+- GNOME - https://www.gnome.org/
+- Hyprland - https://hyprland.org/
+- i3-wm - https://i3wm.org/
+- KDE Plasma - https://kde.org/plasma-desktop/
+- Labwc - https://github.com/labwc/labwc
+- LXQt - https://lxqt-project.org/
+- MATE - https://mate-desktop.org/
+- Niri - https://niri.snakedev.org/
+- Qtile - http://www.qtile.org/
+- River - https://github.com/riverwm/river
+- Sway - https://swaywm.org/
+- Xfce4 - https://www.xfce.org/
+- Xmonad - https://xmonad.org/
+
+ 
  
  
