@@ -1,8 +1,6 @@
-![4- particionamiento4](https://github.com/user-attachments/assets/0a1eb591-fa5e-4dd3-904d-f71eb6ea994c)# Guia-Instalar-Arch-Linux-VirtualBox-
-
-## Bloque 1
+# Bloque 1
 ### 1 Descargar la ISO de la página oficial:
--  https://archlinux.org/download/
+- https://archlinux.org/download/
   <img src= "Imagenes/0- InstalacionEnVirtualBox/1- isoArch.png" width="800">
 
 ### 2 Una vez descargada, crear una nueva Maquina Virtual en VirtualBox pulsando la tecla "Nueva".
@@ -19,7 +17,7 @@
 - Por ultimo, nos saldrá una ventana que muestra la configuracion que hemos hecho, si está todo correcto, pulsar "Confirmar"
 
 
-## Bloque 2
+# Bloque 2
 ### 1 "Enceder ArchLinux"
 - Una vez hemos seleccionado "Iniciar" en VirtualBox, nos aparecerá la siguiente imagen en poco tiempo. 
 - Esta imagen es un "instalador", nos permite reiniciar el sistema, apagarlo, instalar ArchLinux.... Por defecto estará en la primera opción que nos permitirá instalar, pulsamos enter. 
@@ -33,7 +31,7 @@
 
 
 
-## Bloque 3
+# Bloque 3
 - Préviamente a instalar toda las configuraciones de nuestro futuro sistema, tenemos que actualizarlo. Para ello usamos el siguiente comando de consola:
 ```bash
  sudo pacman -Syu
@@ -50,7 +48,7 @@ A continuacion, ejecutamos el siguiente comando para empezar a instalar:
   archinstall
   ```
 
-## Bloque 4
+# Bloque 4
 - Esto es el resultado de ejecutar "archinstall", es una forma "más sencilla" de instalar Arch Linux. 
 - Vamos a ir por partes y centrándonos en las "esenciales"
   <img src= "Imagenes/3- ArchInstall/Entorno Grafico/1- perfil1.png" width="800">
@@ -109,5 +107,79 @@ A continuacion, ejecutamos el siguiente comando para empezar a instalar:
 - F2FS: Optimizado para SSD y móviles, alarga su vida y los hace más rápidos.
 
 #### Al escoger la de btrfs nos saldrá la siguientes pestañas:
-<img src= "Imagenes/3- ArchInstall/Particionamiento/5- btrfs.png" width="800">
-<img src= "Imagenes/3- ArchInstall/Particionamiento/5- btrfs2.png" width="800">
+<img src= "Imagenes/3- ArchInstall/Particionamiento/5- brtfs.png" width="800">
+<img src= "Imagenes/3- ArchInstall/Particionamiento/6- brtfs2.png" width="800">
+
+### La diferencia entre cada opcion es:
+#### Usar subvolúmenes (Sí): (RECOMENDADO)
+- Crea una estructura organizada (ej: /@ para el sistema, /@home para datos).
+- Permite hacer snapshots independientes de cada subvolumen (ej: backup de /home sin afectar el sistema).
+- Ideal para rollbacks o backups selectivos.
+
+#### No usar subvolúmenes (No):
+- Todo se guarda en una sola partición sin división lógica.
+- Menos flexible para gestionar snapshots o recuperaciones.
+
+#### Usar compresión:
+- Reduce el tamaño de los archivos (ahorra espacio en disco).
+- Mejora velocidad de lectura (especialmente útil en SSD).
+- Soporta algoritmos como zstd (equilibrio entre compresión y rendimiento).
+- Permite snapshots y evita corrupción de datos.
+- Pequeña sobrecarga en escrituras (ideal para archivos normales).
+
+#### Desactivar compresión:
+- Mayor velocidad en escrituras (útil para bases de datos o VMs).
+- Pierdes snapshots y checksums (mayor riesgo de corrupción).
+
+### Cuenta del usuario
+- (clicamos con enter para acceder)
+  <img src= "Imagenes/3- ArchInstall/Cuenta de Usuario/1- usuario.png" width="800">
+- Se nos muestra la siguiente imagen:
+  <img src= "Imagenes/3- ArchInstall/Cuenta de Usuario/2- usuario2.png" width="800">
+
+#### Añadir un usuario
+- Sirve para crear un nuevo usuario ("crear una cuenta")
+- Nombre de usuario (lo dice el nombre)
+- Contraseña y "Confirmar contraseña" TIENEN QUE SER LA MISMA PALABRA/CONTRASEÑA
+  <img src= "Imagenes/3- ArchInstall/Cuenta de Usuario/3- usuario3.png" width="800">
+- Al escribirlo correctamente, nos preguntará si queremos que el usuario sea un "superusuario"(sudo)
+  <img src= "Imagenes/3- ArchInstall/Cuenta de Usuario/4- usuario4.png" width="800">
+
+  #### Ser superusuario:
+  - Instalar/eliminar software (apt install, dnf remove).
+  - Editar configuraciones del sistema (ej: /etc/fstab).
+  - Reiniciar servicios (systemctl restart servicio).
+  - Cambiar dueños/permisos de cualquier archivo (chown, chmod).
+  - Apagar/reiniciar el sistema.
+
+  #### No ser superusuario:
+  -  Acceder y modificar solo tus archivos personales (en /home/usuario).
+  -  Usar programas instalados para todos los usuarios.
+  -  Cambiar configuraciones que no afecten al sistema.
+- Independientemente de la opcion escogida, nos mostrará la siguiente escena/situación
+  <img src= "Imagenes/3- ArchInstall/Cuenta de Usuario/5- usuario5.png" width="800">
+  - Ahora actualizada podemos ver los detalles que hemos configurado:
+      - Usuario 
+      - Contraseña
+      - Permisos de superusuario (True si ES SUPERUSUARIO, False en caso contrario)
+  - Clicamos Enter en Confirmar y salir y volvemos a la pestaña original
+     
+#### Confirmar y salir
+- Una vez creado el usuario, poder guardarlo y volver atrás
+#### Cancelar
+- Volver atrás SIN guardar el usuario
+
+### Perfil
+ <img src= "Imagenes/3- ArchInstall/Entorno Grafico/1- perfil1.png" width="800">
+ #### Clicamos enter y nos aparece esto:
+ <img src= "Imagenes/3- ArchInstall/Entorno Grafico/2- perfil2.png" width="800">
+ - Tipo (escoger tipo de entorno grafico)
+ - Regresar (volver atras)
+ Al escoger "Tipo" nos aparece la siguiente opcion:
+ <img src= "Imagenes/3- ArchInstall/Entorno Grafico/3- perfil3.png" width="800">
+ - Desktop: Entorno gráfico completo para uso general.
+ - Minimal: Sistema básico sin extras, ideal para personalizar.
+ - Server: Configuración para servidores sin gráficos.
+ - Xorg: Servidor gráfico sin entorno de escritorio predefinido.
+ 
+ 
