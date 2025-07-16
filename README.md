@@ -263,20 +263,31 @@ Clicamos enter
 
 ## Bloque 5
 -  Al clicar instalar, nos aparece el siguiente codigo que es el resultado de aplicar archinstall, clicamos en el "si" y esperamos a que se instale
+
 <img src= "Imagenes/4- Ultimos Pasos/1- instalar.png" width="800">
+
 -  una vez instalado todo, nos sadra 3 opciones, una de ella es "reboot system", tenemos que seleccionar esa
 -  Una vez reiniciado nos saldrá la siguiente pestaña
+
 <img src= "Imagenes/4- Ultimos Pasos/2- salir.png" width="800">
+
 -  Clicamos en "Power Off".
 -  A continuacion, vamos configuracion de la maquina virtual y ELIMINAMOS LA ISO siguiendo estos pasos:
+
 <img src= "Imagenes/4- Ultimos Pasos/3- eliminar.png" width="800">
+
 -  La iniciamos de nuevo
 
 ## Bloque 6
 -  Al iniciar, saldrá lo siguiente:
+
    <img src= "Imagenes/5- Resultado Final/1- final1.png" width="800">
+   
    -  Clicamos enter en "Arch Linux"
+   
    <img src= "Imagenes/5- Resultado Final/2- final2.png" width="800">
+   
    -  Iniciamos sesión con el usuario que hemos creado
 - TERMINADO, EN MI CASO AL HABER ESCOGIDO QTILE ME SALE LA SIGUIENTE INTERFAZ (PRESIONANDO WINDOWS + ENTER):
-   <img src= "Imagenes/5- Resultado Final/3- final3.png" width="800">
+
+  <img src= "Imagenes/5- Resultado Final/3- final3.png" width="800">
