@@ -210,6 +210,73 @@ A continuacion, ejecutamos el siguiente comando para empezar a instalar:
 - Xfce4 - https://www.xfce.org/
 - Xmonad - https://xmonad.org/
 
+ Volvemos atrás
+
+ ### Audio
+
+ <img src= "Imagenes/3- ArchInstall/Audio/1- audio.png" width="800">
+ Clicamos enter y escogemos el tipo de audio que queremos tener
+
+ <img src= "Imagenes/3- ArchInstall/Audio/2- audio2.png" width="800">
+
+
+ ### No audio server (solo ALSA)
+ -   Enfoque: Acceso directo al hardware, sin servidor intermedio.
+ -   Ventaja: Mínima latencia, útil para sistemas embebidos o audio profesional (con JACK).
+ -   Desventaja: No permite mezclar múltiples aplicaciones de audio.
+
+ ### PipeWire (recomendado)
+ -   Enfoque: Sucesor moderno de PulseAudio y JACK.
+ -   Ventaja: Baja latencia, compatible con PulseAudio y JACK, ideal para multimedia profesional.
+ -   Desventaja: Configuración un poco más compleja.
  
+ ### PulseAudio
+ -   Enfoque: Servidor de audio tradicional para escritorios.
+ -   Ventaja: Fácil de usar, ideal para usuarios comunes (música, videos, llamadas).
+ -   Desventaja: Latencia más alta, no óptimo para producción profesional.
  
- 
+### Red
+<img src= "Imagenes/3- ArchInstall/Configurar Red/1- Configurar Red.png" width="800">
+Clicamos enter
+
+<img src= "Imagenes/3- ArchInstall/Configurar Red/2- Configurar Red2.png" width="800">
+
+### Configuración manual
+-  Qué es: Configurar la red "a mano" editando archivos como /etc/network/interfaces (Debian/Ubuntu) o con ip, nmcli (NetworkManager).
+-  Ventaja: Mayor control, útil en servidores o redes avanzadas.
+-  Desventaja: Requiere conocimientos técnicos, no es intuitivo.
+
+### Copiar la configuración de red ISO a la instalación
+-  Qué es: Clona la configuración de red usada durante la instalación (útil si el sistema detectó correctamente la red en el Live ISO).
+-  Ventaja: Rápido y sencillo si la ISO ya tenía conexión funcional.
+-  Desventaja: No siempre aplicable (ejemplo: si la red ISO usaba DHCP temporal).
+
+### Usar NetworkManager (recomendado para GNOME/KDE) (RECOMENDADO)
+-  Qué es: Gestor de red gráfico predeterminado en entornos de escritorio (GNOME, KDE Plasma).
+-  Ventajas:
+    Interfaz amigable (applet en la barra de tareas),
+    Soporte para Wi-Fi, VPN, conexiones móviles, etc,
+    Fácil cambiar entre redes.
+-  Desventaja: Menos flexible para configuraciones avanzadas (aunque se puede usar nmcli en terminal).
+
+### Zona horaria (opcional), escoger la hora del pais en el que estás
+
+## Bloque 5
+-  Al clicar instalar, nos aparece el siguiente codigo que es el resultado de aplicar archinstall, clicamos en el "si" y esperamos a que se instale
+<img src= "Imagenes/4- Ultimos Pasos/1- instalar.png" width="800">
+-  una vez instalado todo, nos sadra 3 opciones, una de ella es "reboot system", tenemos que seleccionar esa
+-  Una vez reiniciado nos saldrá la siguiente pestaña
+<img src= "Imagenes/4- Ultimos Pasos/2- salir.png" width="800">
+-  Clicamos en "Power Off".
+-  A continuacion, vamos configuracion de la maquina virtual y ELIMINAMOS LA ISO siguiendo estos pasos:
+<img src= "Imagenes/4- Ultimos Pasos/3- eliminar.png" width="800">
+-  La iniciamos de nuevo
+
+## Bloque 6
+-  Al iniciar, saldrá lo siguiente:
+   <img src= "Imagenes/5- Resultado Final/1- final1.png" width="800">
+   -  Clicamos enter en "Arch Linux"
+   <img src= "Imagenes/5- Resultado Final/2- final2.png" width="800">
+   -  Iniciamos sesión con el usuario que hemos creado
+- TERMINADO, EN MI CASO AL HABER ESCOGIDO QTILE ME SALE LA SIGUIENTE INTERFAZ (PRESIONANDO WINDOWS + ENTER):
+   <img src= "Imagenes/5- Resultado Final/3- final3.png" width="800">
